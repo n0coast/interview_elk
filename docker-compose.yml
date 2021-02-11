@@ -15,6 +15,6 @@ services:
     image: docker.elastic.co/logstash/logstash-oss:6.8.9
     container_name: logstash
     volumes:
-      - ${PWD}/apache_logs:/tmp/apache_logs
-      - ${PWD}/logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf
-      - ${PWD}/logstash/apache_template.json:/tmp/apache_template.json
+      - "./apache_logs:/tmp/apache_logs"
+      - "./logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf"
+      - "./logstash/apache_template.json:/tmp/apache_template.json"
